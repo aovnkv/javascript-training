@@ -1,6 +1,7 @@
 /**
  * Create a function prototype defer method
  */
+'use strict';
 
 Function.prototype.defer = function(ms) {
   var f = this;
@@ -13,9 +14,16 @@ Function.prototype.defer = function(ms) {
   };
 };
 
+Function.prototype.deferArrowFunc = function(ms) {
+  let f = this;
+  return function() {
+    setTimeout(() => f.apply(null, arguments), ms);
+  };
+};
+
 // проверка
 function f(a, b) {
-  alert(a + b);
+  console.log(a + b);
 }
 
-f.defer(1000)(1, 2); // выведет 3 через 1 секунду.
+f.deferArrowFunc(1000)(1, 7); // выведет 3 через 1 секунду.

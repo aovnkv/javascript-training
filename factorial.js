@@ -19,5 +19,13 @@ let fact = n => {
   return res;
 };
 
+function factorial(n){
+    var result = 1;
+    while(n){
+        result *= n--;
+    }
+    return result;
+}
+
 let log = fn => console.log(fn);
 log(fact(1));

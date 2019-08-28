@@ -11,9 +11,9 @@ let factorial = n => {
 let fact = n => {
   if (isNaN(n)) {
     throw new Error('not a number');
-  } else if (n <= 1) return 1;
+  }
   let res = 1;
-  for (let i = n; i > 1; i--) {
+  for (let i = 1; i <= n; i++) {
     res *= i;
   }
   return res;

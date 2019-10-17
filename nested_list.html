@@ -136,8 +136,7 @@
         let btn = e.target;
         let clicks = +btn.textContent.slice(1, 2);
         let otherText = btn.textContent.slice(3);
-        clicks += 1;
-        console.log(clicks, otherText);
+        clicks ++;
         let isNext = btn.classList.contains('next');
         let isBack = btn.classList.contains('back');
         if (isNext) {

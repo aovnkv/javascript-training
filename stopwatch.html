@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Секундомер</title>
+  </head>
+  <body>
+    <style>
+      .timer {
+        position: relative;
+        display: block;
+        width: 160px;
+        margin: 4em auto;
+        font-size: 4em;
+      }
+    </style>
+    <main class="main">
+      <div class="timer"></div>
+    </main>
+    <script>
+      const container = document.querySelector('.timer');
+      window.onload = () => {
+        let ms = 0,
+          s = 0,
+          m = 0,
+          h = 0,
+          sec,
+          min,
+          hours;
+
+        let timerID = setInterval(() => {
+          s += 1;
+          if (parseInt(s / 60)) m += 1;
+          if (parseInt(m / 60)) h += 1;
+
+          if (s === 60) s = 0;
+          sec = s < 10 ? '0' + s : s;
+
+          if (m === 60) m = 0;
+          min = m < 10 ? '0' + m : m;
+
+          if (h === 24) h = 0;
+          hours = h < 10 ? '0' + h : h;
+
+          container.innerHTML = `${hours}:${min}:${sec}`;
+
+          ms += 1000;
+        }, 1000);
+      };
+
+      window.onbeforeunload = () => clearInterval(timerID);
+    </script>
+  </body>
+</html>

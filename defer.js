@@ -26,4 +26,4 @@ function f(a, b) {
   console.log(a + b);
 }
 
-f.deferArrowFunc(1000)(1, 7); // выведет 3 через 1 секунду.
+f.deferArrowFunc(1000)(1, 2); // выведет 3 через 1 секунду.

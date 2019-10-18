@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  background: #ddd;
+}

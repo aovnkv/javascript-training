@@ -1,0 +1,35 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "javascript training tasks",
+  "main": "index.js",
+  "dependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aovnkv/javascript-training.git"
+  },
+  "keywords": [
+    "javascript",
+    "codewars",
+    "coding",
+    "training"
+  ],
+  "author": "aovnkv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aovnkv/javascript-training/issues"
+  },
+  "homepage": "https://github.com/aovnkv/javascript-training#readme"
+}

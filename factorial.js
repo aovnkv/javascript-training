@@ -1,7 +1,7 @@
 /**
  * @param {number} n
  */
-let factorial = n => {
+let factorialRecur = n => {
   if (isNaN(n)) {
     throw new Error('not a number');
   }
